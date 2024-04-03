@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <style>
+        .textwhite {
+             color: white;
+        }
+        .textpurple {
+             color: purple;
+         }
+    </style>
+</head>
+<body>
+    <h1 id="text">DOM Manipulation</h1>
+
+    <button id="red">red</button>
+    <button id="blue">blue</button>
+
+    <button id="white">white</button>
+    <button id="purple">purple</button>
+
+    <button id="surpriseMe">Surprise Me</button>
+    <p id="surpriseText" style="display: none;">You're Surprised!</p>
+    <button id="dontsurpriseMe">Don't Surprise Me</button>
+
+    <script>
+        const redBtn = document.getElementById("red");
+        const blueBtn = document.getElementById("blue");
+        const whiteBtn = document.getElementById("white");
+        const purpleBtn = document.getElementById("purple");
+        const surpriseMeBtn = document.getElementById("surpriseMe");
+        const dontsurpriseMeBtn = document.getElementById("dontsurpriseMe");
+        const surpriseText = document.getElementById("surpriseText");
+
+        // Red button event listener
+        redBtn.addEventListener("click", function() {
+            document.body.style.backgroundColor = "red";
+        });
+
+        // Blue button event listener
+        blueBtn.addEventListener("click", function() {
+            document.body.style.backgroundColor = "blue";
+        });
+
+        // White button event listener
+        whiteBtn.addEventListener("click", function() {
+            document.getElementById("text").className = 'textwhite';
+        });
+
+        // Purple button event listener
+        purpleBtn.addEventListener("click", function() {
+            document.getElementById("text").className = 'textpurple';
+        });
+
+        // Surprise Me button event listener
+        surpriseMeBtn.addEventListener("click", function() {
+            surpriseText.style.display = "block"; // Show the "You're Surprised!" text
+        });
+
+        // Don't Surprise Me button event listener
+        dontsurpriseMeBtn.addEventListener("click", function() {
+            surpriseText.style.display = "none"; // Hide the "You're Surprised!" text
+        });
+    </script>
+</body>
+</html>
